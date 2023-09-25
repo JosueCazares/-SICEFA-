@@ -1,0 +1,78 @@
+<div>
+
+  <h3 class="text-center pb-2">Agregar Sucursal</h3>
+  <div class="container bg-body-tertiary">
+    <div class="row pt-3 p-5 mb-4">
+      <div class="col-md-6">
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtNomSuc"><strong>Nombre de la sucursal:</strong></label>
+          <input class="form-control" type="text" id="txtNomSuc" name="txtNomSuc" placeholder="Nombre de la sucursal">
+        </div>
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtNomTitu"><strong>Nombre del titular:</strong></label>
+          <input class="form-control" type="text" id="txtNomTitu" name="txtNomTitu" placeholder="Nombre del titular">
+        </div>
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtRfc"><strong>RFC del titular:</strong></label>
+          <input class="form-control" type="text" id="txtRfc" name="txtRfc" placeholder="RFC del titular">
+        </div>
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtDom"><strong>Domicilio:</strong></label>
+          <input class="form-control" type="text" id="txtDom" name="txtDom" placeholder="Domicilio">
+        </div>
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtCol"><strong>Colonia:</strong></label>
+          <input class="form-control" type="text" id="txtCol" name="txtCol" placeholder="Colonia">
+        </div>
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtCiudad"><strong>Ciudad:</strong></label>
+          <input class="form-control" type="text" id="txtCiudad" name="txtCiudad" placeholder="Ciudad">
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtEst"><strong>Estado:</strong></label>
+          <input class="form-control" type="text" id="txtEst" name="txtEst" placeholder="Estado">
+        </div>
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtCp"><strong>Código postal:</strong></label>
+          <input class="form-control" type="text" id="txtCp" name="txtCp" placeholder="Código postal">
+        </div>
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtTel"><strong>Teléfono:</strong></label>
+          <input class="form-control" type="text" id="txtTel" name="txtTel" placeholder="Teléfono">
+        </div>
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtLong"><strong>Longitud:</strong></label>
+          <input class="form-control" type="text" id="txtLong" name="txtLong" placeholder="Longitud">
+        </div>
+        <div class="row input-group mb-3">
+          <label class="mb-1" for="txtLat"><strong>Latitud:</strong></label>
+          <input class="form-control" type="text" id="txtLat" name="txtLat" placeholder="Latitud">
+        </div>
+
+        <!-- Agrega este botón en tu formulario de registro de sucursal -->
+        <button onclick="obtenerGeolocalizacion()">Obtener Geolocalización</button>
+
+
+
+        <!-- botones -->
+        <!-- AGREGAR -->
+
+        <br><br>
+        <div class="col my-2">
+          <button type="button" class="btn btn-warning btn-lg w-100" onclick="agregarRegistro()">Agregar </button>
+        </div>
+        <div class="col  text-end my-1">
+          <button type="button" class="btn btn-secondary btn-lg w-100"
+            onclick="cargarContenido('agregarSucursal.html')">Cancelar</button>
+        </div>
+
+        <!-- CANCELAR -->
+
+      </div>
+    </div>
+  </div>
+
+</div>

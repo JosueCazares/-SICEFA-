@@ -1,0 +1,154 @@
+<h2 class="text-center pb-2">Módulo de clientes</h2>
+<div class="container pt-3 p-3 mb-4 bg-body-tertiary rounded-3">
+    <div class="row">
+        <div class="col col-xl">
+            <label class="mb-1" for="txtClienteBuscar"><strong>Buscar:</strong></label>
+            <input class="form-control" type="text" id="txtClienteBuscar" name="txtClienteBuscar"
+                placeholder="Buscar cliente por número telefónico" style="">
+        </div>
+        <div class="col col-md-auto text-end pt-4">
+            <button onclick="buscarCliente();" type="button" class="btn btn-success">Buscar</button>
+        </div>
+    </div>
+</div>
+<div class="container pt-3 pb-3 p-5 mb-4 bg-body-tertiary rounded-3">
+    <h3 class="text-center pb-3">Datos del cliente</h3>
+    <div id="botones" class="row">
+        <div class="col-auto">
+            <svg class="bd-placeholder-img" width="200" height="300" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Foto del cliete</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect><text x="45%" y="50%" fill="#eceeef"
+                    dy=".3em">Foto</text>
+            </svg>
+        </div>
+        <div class="col">
+            <div class="row input-group mb-3">
+                <label for="txtClienteNombre" class="col">Nombre:</label>
+                <input id="txtClienteNombre" class="col form-control" disabled>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="txtClienteApellidoPaterno" class="col">Apellido paterno:</label>
+                <input id="txtClienteApellidoPaterno" class="col form-control" disabled>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="txtClienteApellidoMaterno" class="col">Apellido materno:</label>
+                <input id="txtClienteApellidoMaterno" class="col form-control" disabled>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="txtClienteTelefono" class="col">Teléfono:</label>
+                <input id="txtClienteTelefono" class="col form-control" disabled>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="radioClienteGenero" class="col">Género:</label>
+                <div class="col form-check">
+                    <input class="form-check-input" type="radio" name="radioClienteGenero" id="radioClienteMasculino"
+                        value="1" disabled>
+                    <label class="form-check-label" for="radioClienteMasculino">
+                        Masculino
+                    </label>
+                </div>
+                <div class="col form-check">
+                    <input class="form-check-input" type="radio" name="radioClienteGenero" id="radioClienteFemenino"
+                        value="2" disabled>
+                    <label class="form-check-label" for="radioClienteFemenino">
+                        Femenino
+                    </label>
+                </div>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="txtClienteFechaNacimiento" class="col">Fecha de nacimiento:</label>
+                <input id="txtClienteFechaNacimiento" class="col form-control" disabled>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row input-group mb-3">
+                <label for="txtClienteRfc" class="col">RFC:</label>
+                <input id="txtClienteRfc" class="col form-control" disabled>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="txtClienteCurp" class="col">CURP:</label>
+                <input id="txtClienteCurp" class="col form-control" disabled>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="txtClienteDomicilio" class="col">Domicilio:</label>
+                <input id="txtClienteDomicilio" class="col form-control" disabled>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="txtClienteCodigoPostal" class="col">Código Postal:</label>
+                <input id="txtClienteCodigoPostal" class="col form-control" disabled>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="txtClienteCiudad" class="col">Ciudad:</label>
+                <input id="txtClienteCiudad" class="col form-control" disabled>
+            </div>
+            <div class="row input-group mb-3">
+                <label for="txtClienteEstado" class="col">Estado:</label>
+                <input id="txtClienteEstado" class="col form-control" disabled>
+            </div>
+            <div class="container input-group mb-3 w-50">
+                <div>
+                    <label for="txtClienteFechaIngreso">registrado el</label>
+                    <label id="txtClienteFechaIngreso"></label>
+                </div>
+            </div>
+        </div>
+        <div class="col col-md-auto">
+            <div class="vstack gap-3">
+                <button id="btnEditar"
+                    onclick="activarCamposCliente(); mostrarBotonesSucursal(false, false, true, true)" class="btn"
+                    hidden>
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+                <button id="btnActivar" onclick="confirmarActivarCliente();" class="btn" hidden>
+                    <i class="bi bi-person-fill-add"></i>
+                </button>
+                <button id="btnEliminar" onclick="confirmarEliminarCliente();" class="btn" hidden>
+                    <i class="bi bi-trash3"></i>
+                </button>
+                <button id="btnCancelar" onclick="cargarClientesSucursal();" class="btn" hidden>
+                    <i class="bi bi-x"></i>
+                </button>
+                <button id="btnAceptar" onclick="editarCliente();" class="btn" hidden>
+                    <i class="bi bi-check2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container pt-3 p-3 mb-4 bg-body-tertiary rounded-3">
+    <div class="row">
+        <div class="col col-xxl">
+            <label class="mb-1" for="txtClienteListar"><strong>Búsqueda general:</strong></label>
+            <input class="form-control" type="text" id="txtClienteListar" name="txtClienteListar"
+                placeholder="Buscar cliente por cualquier campo" style="">
+        </div>
+        <div class="col col-md-auto text-end pt-4">
+            <button type="button" class="btn btn-success" onclick="filtrarClientes();">Buscar</button>
+        </div>
+    </div>
+    <div class="form-check form-switch pt-2">
+        <input class="form-check-input" type="checkbox" id="chkClienteEstatus" onchange="filtrarClientes();">
+        <label class="form-check-label" for="chkClienteEstatus">Mostrar solo activos</label>
+    </div>
+</div>
+<div class="container pt-3 pb-3 mb-4 bg-body-tertiary rounded-3">
+    <table class="table table-sm">
+        <thead>
+            <tr class="text-center">
+                <th>Nombre completo</th>
+                <th>Teléfono</th>
+                <th>Fecha de nacimiento</th>
+                <th>RFC</th>
+                <th>CURP</th>
+                <th>Domicilio</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody id="tablaClientes" class="text-center">
+        </tbody>
+    </table>
+</div>
+<div class="col text-center pb-5">
+    <button onclick="cargarAgregarCliente();" class="btn btn-success w-50">Agregar cliente</button>
+</div>

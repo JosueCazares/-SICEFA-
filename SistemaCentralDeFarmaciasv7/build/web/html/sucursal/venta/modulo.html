@@ -1,0 +1,77 @@
+<h2 class="text-center pb-2">Módulo de ventas</h2>
+<div class="container pt-3 p-3 mb-4 bg-body-tertiary rounded-3">
+    <div class="row">
+        <div class="col col-xxl">
+            <label class="mb-1" for="txtVentaBuscar"><strong>Búsqueda general:</strong></label>
+            <input class="form-control" type="text" id="txtVentaBuscar" name="txtVentaBuscar"
+                   placeholder="Buscar venta por cualquier campo" style="">
+        </div>
+        <div class="col col-md-auto text-end pt-4">
+            <button type="button" class="btn btn-success">Buscar</button>
+        </div>
+    </div>
+</div>
+<div class="container pt-3 p-3 mb-4 bg-body-tertiary rounded-3">
+    <table class="table table-sm">
+        <thead>
+            <tr class="text-center">
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Cliente</th>
+                <th>Vendedor</th>
+                <th>Descripción</th>
+                <th>Total</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody id="tablaVentas">
+        </tbody>
+    </table>
+</div>
+<div class="container pt-3 p-3 mb-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid">
+        <h3 class="text-center pb-2">Venta</h3>
+        <div class="row">
+            <div class="col">
+                <div class="vstack">
+                    <label>Fecha:</label>
+                    <label>Hora:</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="vstack">
+                    <label>Cliente:</label>
+                    <label>Vendedor:</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <h3 class="text-center pb-2">Detalles Venta</h3>
+        <table class="table table-sm">
+            <thead>
+                <tr class="text-center">
+                    <th>Código de barras</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="tablaDetallesVenta">
+            </tbody>
+        </table>
+    </div>
+    <div class="text-end">
+        <button id="btnEliminar" onclick="" class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill"
+                 viewBox="0 0 16 16">
+            <path
+                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+            </svg>
+        </button>
+    </div>
+</div>
+<div class="col text-center pb-5">
+    <button onclick="cargarAgregarVenta();" class="btn btn-success w-50">Nueva venta</button>
+</div>

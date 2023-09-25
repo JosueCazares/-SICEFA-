@@ -1,0 +1,114 @@
+<header class="headerCentral">
+    <h1>CENTRAL</h1>
+</header>
+
+<aside class="sidebar active" id="sidebar" onmouseover="mostrarAside();" onmouseout="mostrarAside();" style="
+">
+    <div class="sidebar-header">
+        <a onclick="cargarMenuCentral();">
+            <img src="media/logo.png" alt="ls" height="100" width="150">
+        </a>
+
+
+    </div>
+    <ul class="menu">
+        <button onclick="handleClick('Suc')">
+            <i class="fa-solid fa-shop" style="color: #FFC107;"></i>
+            <span>Sucursal</span>
+        </button>
+        <div id="Suc" class="subnav">
+            <div class="subnav-inner">
+                <button onclick="cargarListadoSucursal()">
+                    <i class="fa-solid fa-list"></i>
+                    <span>Listado de Sucursales</span>
+                </button>
+                <button onclick="cargarAgregarSucursal();">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Agregar Sucursal</span>
+                </button>
+            </div>
+        </div>
+        <button onclick="handleClick('pedidos')">
+            <i class="fa-solid fa-truck-fast" style="color: #FFC107;"></i>
+            <span>Pedidos</span>
+        </button>
+        <div id="pedidos" class="subnav">
+            <div class="subnav-inner">
+                <button onclick="cargarContenido('pagina2.html')">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Pedidos Atendidos</span>
+                </button>
+                <button onclick="cargarContenido('pagina2.html')">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>Pedidos Pendientes</span>
+                </button>
+                <button onclick="cargarContenido('pagina2.html')">
+                    <i class="fa-solid fa-file"></i>
+                    <span>Reportes</span>
+                </button>
+            </div>
+        </div>
+        <button onclick="handleClick('productos')">
+            <i class="fa-solid fa-pills" style="color: #FFC107;"></i>
+            <span>Productos</span>
+        </button>
+        <div id="productos" class="subnav mb-5">
+            <div class="subnav-inner">
+                <button onclick="cargarContenido('pagina2.html')">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Listado de Productos</span>
+                </button>
+                <button onclick="cargarContenido('pagina2.html')">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>Agregar Producto</span>
+                </button>
+                <button onclick="cargarContenido('pagina2.html')">
+                    <i class="fa-solid fa-file"></i>
+                    <span>Reportes</span>
+                </button>
+            </div>
+        </div>
+        <button onclick="handleClick('cuenta')">
+            <i class="bi bi-gear-fill" style="color: #FFC107;"></i>
+            <span>Cuenta</span>
+        </button>
+        <div id="cuenta" class="subnav mb-5">
+            <div class="subnav-inner">
+                <button onclick="cargarCentral();">
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span>Salir</span>
+                </button>
+            </div>
+        </div>
+    </ul>
+</aside>
+
+<main id="contenido">
+    <!--Carga de módulos-->
+</main>
+
+<footer class="bg-custom-color text-light py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-2">
+                    <small class="d-block">BLVD. UNIVERSIDAD TECNOLÓGICA 225</small>
+                    <small class="d-block">UNIVERSIDAD TECNOLÓGICA, SAN CARLOS LA RONCHA</small>
+                    <small class="d-block">37670 LEÓN, GTO.</small>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="#" class="text-light">Volver arriba</a>
+                <div class="pt-3">
+                    <img src="media/logo_kirklearn.png" width="70" alt="logo">
+                    <p class="m-0 fs-6">Kirklearn Technologies</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-end">
+                <div class="fs-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

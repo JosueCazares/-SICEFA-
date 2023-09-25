@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: noto sans;
+}
+
+/* Estilos para el encabezado */
+.headerSucursal {
+  background-color: #99db8a;
+  color: #000000;
+  height: 115;
+  font-size: 15pxpx;
+  text-align: right;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.307);
+}
+
+/* Estilos para la barra lateral */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #2c2c2c;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.307);
+  z-index: 9999; /* Establece un valor alto para superponer la barra lateral */
+}
+
+
+.sidebar.active {
+  width: 70px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #5cc444;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.307);
+}
+
+.sidebar.active img {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: left;
+  height: 50px;
+  width: 60px;
+  padding: 100 160px 0 25px;
+  color: #ffffff;
+  transition: 0.25s;
+}
+
+.menu {
+  list-style: none;
+  padding: 4px;
+  margin: 20px 0;
+}
+
+
+/* Estilos para mostrar el botón de hamburguesa cuando la barra lateral está oculta */
+.sidebar.active #sidebar-toggle.show .menu-text {
+  display: none;
+}
+
+/* Ocultar texto de opciones en la barra lateral cuando está oculta */
+.sidebar.active .menu a .menu-text {
+  display: none;
+}
+
+/* Estilos para el contenido */
+main {
+  margin-left: 50px;
+  padding: 10px;
+}
+
+.bg-custom-color {
+  background-color: #2c2c2c; 
+}
+
+
+
+/* Estilos para el responsive */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 70px;
+  }
+
+  .sidebar.active {
+      width: 200px;
+  }
+
+  main {
+      margin-left: 70px;
+  }
+
+  #sidebar-toggle .menu-text {
+      display: none;
+  }
+
+  .sidebar.active #sidebar-toggle.show .menu-text {
+      display: inline;
+  }
+}
+
+
+/*sub menus */
+
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.subnav {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  transition: 0.4s;
+}
+
+.subnav-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.subnav button {
+padding-left: 64px;
+}
+
+.subnav button::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  translate: 0 -50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255 / 40%);
+}
+
+.sidebar button {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 16px 0 25px;
+  color: #ffffff;
+  transition: 0.25s;
+}
+
+.sidebar.active button {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 0;
+  line-height: 0;
+  padding: 0 16px 0 25px;
+  color: #ffffff;
+  transition: 0.25s;
+}
+
+.sidebar.active button span {
+  display: none;
+}
+
+.sidebar.active button i {
+  margin-right: 0; 
+}
+
+.sidebar button.active, .subnav {
+  background: #32303c;
+}
+
+.sidebar button:hover{
+  background: #3c3a48;
+}
+
+.sidebar button span:nth-child(2) {
+  flex: 1 1 auto;
+}
+
+.sidebar button.active span:nth-child(3){
+  rotate: -180deg;
+}
+
+.sub-nav button.active::before {
+  background: #f9f9f9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-item i {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.menu-item span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+
+
+.Triangulos {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.Triangulos input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+
+.Triangulos button {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.Triangulos input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #ffffff;
+  font-size: 16px;
+}

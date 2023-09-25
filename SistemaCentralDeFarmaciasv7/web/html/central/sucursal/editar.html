@@ -1,0 +1,83 @@
+  
+    <h3 class="text-center pb-2">Editar Sucursal</h3>
+    <div class="container bg-body-tertiary">
+      <div class="row pt-3 p-5 mb-4">
+          <div class="col-md-6" >
+              <div class="row input-group mb-3">
+                
+
+                  <label class="mb-1" for="editar_txtNomSuc"><strong>Nombre de la sucursal:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtNomSuc" name="editar_txtNomSuc" placeholder="Nombre de la sucursal">
+              </div>
+              <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtNomTitu"><strong>Nombre del titular:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtNomTitu" name="editar_txtNomTitu" placeholder="Nombre del titular">
+              </div>
+              <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtRfc"><strong>RFC del titular:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtRfc" name="editar_txtRfc" placeholder="RFC del titular">
+              </div>
+              <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtDom"><strong>Domicilio:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtDom" name="editar_txtDom" placeholder="Domicilio">
+              </div>
+              <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtCol"><strong>Colonia:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtCol" name="editar_txtCol" placeholder="Colonia">
+              </div>
+              <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtCiudad"><strong>Ciudad:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtCiudad" name="editar_txtCiudad" placeholder="Ciudad">
+              </div>
+              
+          </div>
+          <div class="col-md-6" >
+            <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtEst"><strong>Estado:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtEst" name="editar_txtEst" placeholder="Estado">
+              </div>
+              <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtCp"><strong>Código postal:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtCp" name="editar_txtCp" placeholder="Código postal">
+              </div>
+              <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtTel"><strong>Teléfono:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtTel" name="editar_txtTel" placeholder="Teléfono">
+              </div>
+              <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtLong"><strong>Longitud:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtLong" name="editar_txtLong" placeholder="Longitud">
+              </div>
+              <div class="row input-group mb-3">
+                  <label class="mb-1" for="editar_txtLat"><strong>Latitud:</strong></label>
+                  <input class="form-control" type="text" id="editar_txtLat" name="editar_txtLat" placeholder="Latitud">
+              </div>
+
+              <div class="form-check form-switch form-check-reverse">
+                <input class="form-check-input" type="checkbox" id="editar_estatus">
+                <label class="form-check-label" for="editar_estatus">Estatus</label>
+              </div>
+    
+              <!-- Agrega este botón en tu formulario de registro de sucursal -->
+              <button onclick="obtenerGeolocalizacion()">Obtener Geolocalización</button>
+    
+    
+    
+              <!-- botones -->
+              <!-- AGREGAR -->
+    
+              <br><br>
+                    <div class="col my-2" >
+                      <button type="button" class="btn btn-warning btn-lg w-100"  onclick="guardarDatosEditados()">Modificar </button>
+                    </div>
+                    <div class="col  text-end my-1" >
+                      <button type="button" class="btn btn-secondary btn-lg w-100" onclick="cargarContenido('listadoSucursal.html')">Cancelar</button>
+                    </div>
+    
+                <!-- CANCELAR -->
+                
+          </div>
+      </div>
+    </div>
+    
+    </div>

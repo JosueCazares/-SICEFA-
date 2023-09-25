@@ -1,0 +1,132 @@
+<h3 class="text-center pb-2">Agregar empleado</h3>
+<div class="container bg-body-tertiary">
+    <div class="row pt-3 p-5 mb-4">
+        <div class="col-md-6">
+            <div class="row input-group mb-3">
+                <label class="mb-1" for="txtEmpleadoNombre"><strong>Nombre:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoNombre" name="txtEmpleadoNombre"
+                    placeholder="Nombre">
+            </div>
+            <div class="row input-group mb-3">
+                <label class="mb-1" for="txtEmpleadoApellidoPaterno"><strong>Apellido paterno:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoApellidoPaterno"
+                    name="txtEmpleadoApellidoPaterno" placeholder="Apellido paterno">
+            </div>
+            <div class="row input-group mb-3">
+                <label class="mb-1" for="txtEmpleadoApellidoMaterno"><strong>Apellido materno:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoApellidoMaterno"
+                    name="txtEmpleadoApellidoMaterno" placeholder="Apellido materno">
+            </div>
+
+            <div class="row input-group mb-3">
+                <label class="mb-1" for="txtEmpleadoFechaDeNacimiento"><strong>Fecha de nacimiento:</strong></label>
+                <input class="form-control" type="date" id="txtEmpleadoFechaDeNacimiento"
+                    name="txtEmpleadoFechaDeNacimiento" placeholder="Fecha de nacimiento:">
+            </div>
+            <div class="row input-group mb-3">
+                <label class="mb-1" for="txtEmpleadoRfc"><strong>RFC:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoRfc" name="txtEmpleadoRfc" placeholder="RFC">
+            </div>
+            <div class="row input-group mb-3">
+                <label class="mb-1" for="txtEmpleadoCurp"><strong>CURP:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoCurp" name="txtEmpleadoCurp" placeholder="CURP">
+            </div>
+            <div class="row input-group mb-3">
+                <label class="mb-1" for="txtEmpleadoPuesto"><strong>Puesto:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoPuesto" name="txtEmpleadoPuesto"
+                    placeholder="CURP">
+            </div>
+            <div class="col row input-group mb-3">
+                <label class="col">Género:</label>
+                <div class="col form-check">
+                    <input class="form-check-input" type="radio" name="radioEmpleadoGenero" id="radioEmpleadoGenero"
+                        value="1">
+                    <label class="form-check-label" for="radioEmpleadoGenero">
+                        Masculino
+                    </label>
+                </div>
+                <div class="col form-check">
+                    <input class="form-check-input" type="radio" name="radioEmpleadoGenero" id="radioEmpleadoGenero"
+                        value="2">
+                    <label class="form-check-label" for="radioEmpleadoGenero">
+                        Femenino
+                    </label>
+                </div>
+            </div>
+            <div class="col row input-group mb-3">
+                <label class="col">Rol:</label>
+                <div class="col form-check">
+                    <input class="form-check-input" type="radio" name="radioRol" id="radioRol" value="Administrador">
+                    <label class="form-check-label" for="radioRol">
+                        Administrador
+                    </label>
+                </div>
+                <div class="col form-check">
+                    <input class="form-check-input" type="radio" name="radioRol" id="radioRol" value="Empleado">
+                    <label class="form-check-label" for="radioRol">
+                        Empleado
+                    </label>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="col">
+                <label class="mb-1" for="txtEmpleadoDomicilio"><strong>Domicilio:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoDomicilio" name="txtEmpleadoDomicilio"
+                    placeholder="Domicilio">
+            </div>
+            <div class="col">
+                <label class="mb-1" for="txtEmpleadoCodigoPostal"><strong>Codigo postal:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoCodigoPostal" name="txtEmpleadoCodigoPostal"
+                    placeholder="Codigo postal">
+            </div>
+            <div class="col">
+                <label class="mb-1" for="txtEmpleadoCiudad"><strong>Ciudad:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoCiudad" name="txtEmpleadoCiudad"
+                    placeholder="Ciudad">
+            </div>
+            <div class="col">
+                <label class="mb-1" for="txtEmpleadoEstado"><strong>Estado:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoEstado" name="txtEmpleadoEstado"
+                    placeholder="Estado">
+            </div>
+            <div class="col">
+                <label class="mb-1" for="txtEmpleadoTelefono"><strong>Telefono:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoTelefono" name="txtEmpleadoTelefono"
+                    placeholder="Telefono">
+            </div>
+            <div class="col">
+                <label class="mb-1" for="txtEmpleadoCorreo"><strong>Correo:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoCorreo" name="txtEmpleadoCorreo"
+                    placeholder="Correo">
+            </div>
+            <div class="col">
+                <label class="mb-1" for="txtEmpleadoSalario"><strong>Salario:</strong></label>
+                <input class="form-control" type="text" id="txtEmpleadoSalario" name="txtEmpleadoSalario"
+                    placeholder="Salario">
+            </div>
+
+
+            <!-- botones -->
+            <!-- AGREGAR -->
+
+
+            <div class="col my-2">
+                <button type="button" class="btn btn-success btn-lg w-100" onclick="agregarEmpleado();">Agregar
+                </button>
+            </div>
+            <div class="col  text-end my-1">
+                <button type="button" class="btn btn-secondary btn-lg w-100"
+                    onclick="cargaModuloEmpleado();">Cancelar</button>
+            </div>
+
+            <!-- CANCELAR -->
+
+        </div>
+    </div>
+</div>
+
+<div>
+    <p id="mensaje1"></p>
+</div>
